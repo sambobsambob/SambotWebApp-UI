@@ -1,0 +1,34 @@
+/*TODO sort out positioning to make each % a % of the same scale*/
+.header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #161616;
+}
+
+li.navigate {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: turquoise;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color:#232323;
+}
+
+.active {
+    background-color: #232323;
+}

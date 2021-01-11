@@ -1,0 +1,20 @@
+.footer {
+    background-color: #161616;
+    position: fixed;
+    bottom: 0px;
+    height: 8%;
+    width: 100%;
+}
+
+p {
+    color: turquoise;
+    text-align: center;
+}
+
+a:link {
+    color: turquoise;
+}
+
+a:hover {
+    color: white;
+}
