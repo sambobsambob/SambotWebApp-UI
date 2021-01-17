@@ -1,8 +1,8 @@
 /*TODO sort out positioning to make each % a % of the same scale*/
-.header {
-    position: fixed;
+header {
     top: 0px;
-    width: 100%;
+    height: 6%; 
+    background-color: #232323;
 }
 
 ul {

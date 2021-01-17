@@ -1,8 +1,10 @@
-/*TODO sort out positioning to make each % a % of the same scale*/
+.parent {
+    height: 100vh;
+}
+
 .body {
-    position: fixed;
+    height: 84%;
     background-color: #232323;
-    height: 88%;
     min-width: 100%;
     text-align: center;
     color: turquoise;

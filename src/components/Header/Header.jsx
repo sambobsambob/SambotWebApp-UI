@@ -19,6 +19,9 @@ class Header extends PureComponent {
                     <li className="navigate"><a href="TwitchBot">TwitchBot</a></li>
                     <li className="navigate"><a href="DiscordBot">DiscordBot</a></li>
                     <li className="navigate"><a href="about.asp">About</a></li>
+                    <li className="navigate"><a href="Register">Register</a></li>
+                    <li className="navigate"><a href="Login">Login</a></li>
+                    
                 </ul>
                 
             </header>

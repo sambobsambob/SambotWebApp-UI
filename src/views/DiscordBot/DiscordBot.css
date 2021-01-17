@@ -1,14 +1,3 @@
-/*TODO sort out positioning to make each % a % of the same scale*/
-.body {
-    position: fixed;
-    background-color: #232323;
-    height: 88.5%;
-    min-width: 100%;
-    text-align: center;
-    color: turquoise;
-    overflow: auto;
-}
-
 .center {
     margin-left: auto;
     margin-right: auto;

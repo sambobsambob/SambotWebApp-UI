@@ -1,12 +1,12 @@
-.footer {
+footer {
     background-color: #161616;
-    position: fixed;
     bottom: 0px;
-    height: 8%;
+    height: 10%;
     width: 100%;
+    position: absolute;
 }
 
-p {
+.footerInfo {
     color: turquoise;
     text-align: center;
 }

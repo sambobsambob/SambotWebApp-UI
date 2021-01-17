@@ -1,5 +1,7 @@
 import React, {PureComponent} from "react";
 import AuthService from "../../components/Auth/Auth.jsx";
+import Header from "../../components/Header/Header.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
 
 class Login extends PureComponent {
 
@@ -17,7 +19,8 @@ class Login extends PureComponent {
     handleChange(event) {
         this.setState({
             [event.target.name]: event.target.value,
-            error: ""
+            error: "",
+            errorShown: "none"
         });
     }
 
@@ -48,18 +51,22 @@ class Login extends PureComponent {
     unauthorized(error) {
         this.setState({
             error: error
-        })
-
+        });
     }
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleFormSubmit}>
-                    <input placeholder="Username" name="username" type="text" onChange={this.handleChange}/>
-                    <input placeholder="Password" name="password" type="password" onChange={this.handleChange}/>
-                    <input id="loginBtn" value="LOGIN" type="submit"/>
-                </form>
+            <div className="parent">
+                <Header/>
+                <div className="body">
+                    <form onSubmit={this.handleFormSubmit}>
+                        <p>{this.state.error}</p>
+                        <input placeholder="Username" name="username" type="text" onChange={this.handleChange}/><br/>
+                        <input placeholder="Password" name="password" type="password" onChange={this.handleChange}/><br/>
+                        <input id="loginBtn" value="LOGIN" type="submit"/>
+                    </form>
+                </div>
+                <Footer/>
             </div>
         )
     }
