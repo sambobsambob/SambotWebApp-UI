@@ -19,8 +19,7 @@ class Login extends PureComponent {
     handleChange(event) {
         this.setState({
             [event.target.name]: event.target.value,
-            error: "",
-            errorShown: "none"
+            error: ""
         });
     }
 
