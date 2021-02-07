@@ -8,29 +8,46 @@ class Header extends PureComponent {
     constructor() {
         super();
         this.auth = new AuthService();
-        this.state = {
-            username: this.auth.getUsername,
-        }
-        console.log(this.state.username);
         this.onLogout = this.onLogout.bind(this);
+        console.log(window.sessionStorage.getItem("username"));
+    }
+
+    async componentDidMount() {
+        try {
+            document.getElementById(this.props.page).style.backgroundColor = "#232323";
+        } catch{}
+        const loggedIn = await this.auth.isTokenValid();
+        if(loggedIn) {
+            console.log("logged in");
+            document.getElementById("signUp").style.display = "none";
+            document.getElementById("login").style.display = "none";
+        } else {
+            document.getElementById("logout").style.display = "none";
+            document.getElementById("username").style.display = "none";
+        }
     }
 
     onLogout() {
         this.auth.logout();
-        this.props.history.replace("/Home");
+        window.location.replace("/");
     }
 
     render() {
         return (
             <header>
                 <ul>
-                    <li className="navigate"><a  className="active" href="/">Home</a></li>
-                    <li className="navigate"><a href="TwitchBot">TwitchBot</a></li>
-                    <li className="navigate"><a href="DiscordBot">DiscordBot</a></li>
-                    <li className="navigate"><a href="about.asp">About</a></li>
-                    <li className="navigate"><a href="SignUp">SignUp</a></li>
-                    <li className="navigate"><a href="Login">Login</a></li>
-                    <button onClick={this.onLogout}>Logout</button>
+                    <li id="home" className="navigate"><a href="/">Home</a></li>
+                    <li id="twitchBot" className="navigate"><a href="TwitchBot">TwitchBot</a></li>
+                    <li id="discordBot" className="navigate"><a href="DiscordBot">DiscordBot</a></li>
+                    <li id="signUp" className="account-management"><a href="SignUp">SignUp</a></li>
+                    <li id="login" className="account-management"><a href="Login">Login</a></li>
+                    
+                    <div className="dropdown">
+                        <li id="username" className="account-management"><span>{window.sessionStorage.getItem("username")}</span></li>
+                        <div className="dropdown-content">
+                            <button id="logout" onClick={this.onLogout}>Logout</button>
+                        </div>
+                    </div>
                 </ul>
             </header>
         );

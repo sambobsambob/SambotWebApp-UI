@@ -56,7 +56,7 @@ class Login extends PureComponent {
     render() {
         return (
             <div className="parent">
-                <Header/>
+                <Header page="login"/>
                 <div className="body">
                     <form onSubmit={this.handleFormSubmit}>
                         <p>{this.state.error}</p>

@@ -1,10 +1,5 @@
 class AuthService {
 
-    constructor() {
-        this.login = this.login.bind(this);
-        this.getUsername = this.getUsername.bind(this);
-    }
-
     async login(username, password) {
         window.sessionStorage.setItem("username", username);
         try {
@@ -24,8 +19,9 @@ class AuthService {
         } catch(e) {}
     }
 
-    setToken(token) {
-        window.sessionStorage.setItem("Auth-Token", token);
+    logout() {
+        window.sessionStorage.removeItem("Auth-Token");
+        window.sessionStorage.removeItem("username");
     }
 
     async isTokenValid() {
@@ -47,17 +43,16 @@ class AuthService {
         }
     }
 
-    getToken() {
-        return window.sessionStorage.getItem("Auth-Token");
-    }
-
-    logout() {
-        window.sessionStorage.removeItem("Auth-Token");
-        window.sessionStorage.removeItem("username");
-    }
-
     getUsername() {
         return window.sessionStorage.getItem("username");
+    }
+
+    setToken(token) {
+        window.sessionStorage.setItem("Auth-Token", token);
+    }
+
+    getToken() {
+        return window.sessionStorage.getItem("Auth-Token");
     }
 }
 

@@ -29,6 +29,49 @@ li a:hover {
     background-color:#232323;
 }
 
-.active {
-    background-color: #232323;
+li.account-management {
+    float: right;
+}
+
+.dropdown {
+    float: right;
+    position: relative;
+    display: block;
+    color: turquoise;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+}
+
+.dropdown:hover {
+    cursor: pointer;
+    color: white;
+}
+  
+.dropdown-content {
+    justify-content: center;
+    display: none;
+    position: relative;
+    padding: 30px;
+    z-index: 1;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+button {
+    float: right;
+    border: none;
+    display: block;
+    color: turquoise;
+    background-color: #161616;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+button:hover {
+    cursor: pointer;
+    color: white;
 }

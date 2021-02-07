@@ -1,14 +1,13 @@
 import React, { PureComponent } from "react";
 import Header from "../../components/Header/Header.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
-import "./Home.css";
 
 
 class Home extends PureComponent {
     render() {
         return (
             <div id="parent" className="parent">
-                <Header page="home"/>
+                <Header page="twitchBot"/>
                 <div className="body"> 
                     <h1>Hello World!</h1>
                 </div>

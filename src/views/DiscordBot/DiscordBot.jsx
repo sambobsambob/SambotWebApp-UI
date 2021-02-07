@@ -45,12 +45,12 @@ class DiscordBot extends PureComponent {
     render() {
         return (
             <div className="parent">
-                <Header/>
+                <Header page="discordBot"/>
                 <div className="body">
                     <img className="discordlogo" src={DiscordLogo} alt="React Logo" /><br/>
                     <p className="addbottext">Click <a className="addbotlink" href="https://discord.com/oauth2/authorize?client_id=573251480279056427&permissions=8&scope=bot" rel="noreferrer" target="_blank">here</a> to add the bot to your server!</p>
                     <p>
-                        Hello visitor, this is my discord bot that I have/am made/making using JDA (Java Discord API) using Java.<br/>
+                        Hello, this is my discord bot that I have made and will be continuing to improve. It is made using JDA (Java Discord API) within Java.<br/>
                         To view all the commands available within your server you can use the command: "!!help".
                     </p>
                     <br/>

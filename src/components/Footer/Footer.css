@@ -2,11 +2,20 @@ footer {
     background-color: #161616;
     bottom: 0px;
     height: 10%;
+    max-height: 10%;
     width: 100%;
     position: absolute;
+    overflow: auto;
+    font-size: 14px;
 }
 
-.footerInfo {
+.footer-contact {
+    padding-top: 0.5%;
+    color: turquoise;
+    text-align: center;
+}
+
+.footer-copyright {
     color: turquoise;
     text-align: center;
 }
