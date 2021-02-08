@@ -9,7 +9,7 @@ class Home extends PureComponent {
             <div id="parent" className="parent">
                 <Header page="twitchBot"/>
                 <div className="body"> 
-                    <h1>Hello World!</h1>
+                    <h1>This page is a work in progress...</h1>
                 </div>
                 <Footer/>
             </div>

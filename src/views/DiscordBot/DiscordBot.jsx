@@ -47,15 +47,19 @@ class DiscordBot extends PureComponent {
             <div className="parent">
                 <Header page="discordBot"/>
                 <div className="body">
-                    <img className="discordlogo" src={DiscordLogo} alt="React Logo" /><br/>
-                    <p className="addbottext">Click <a className="addbotlink" href="https://discord.com/oauth2/authorize?client_id=573251480279056427&permissions=8&scope=bot" rel="noreferrer" target="_blank">here</a> to add the bot to your server!</p>
-                    <p>
-                        Hello, this is my discord bot that I have made and will be continuing to improve. It is made using JDA (Java Discord API) within Java.<br/>
-                        To view all the commands available within your server you can use the command: "!!help".
-                    </p>
-                    <br/>
-                    <h2>Command list:</h2>
-                    <table className="center">
+                    <div className="discordbot-center">
+                        <img className="discordlogo" src={DiscordLogo} alt="React Logo" /><br/>
+                        <p className="addbottext">Click <a className="addbotlink" href="https://discord.com/oauth2/authorize?client_id=573251480279056427&permissions=8&scope=bot" rel="noreferrer" target="_blank">here</a> to add the bot to your server!</p>
+                    </div>
+                    <div className="discordbot-info">
+                        <p>
+                            Hello, this is my discord bot that I have made and will be continuing to improve. It is made using JDA (Java Discord API) in Java.<br/>
+                            To view all the commands available within your server you can use the command: "!!help".
+                        </p>
+                        <br/>
+                    </div>
+                    <h2 className="discordbot-center">Command list:</h2>
+                    <table className="center-table">
                         <thead>
                             <tr>
                                 <th>Command</th>

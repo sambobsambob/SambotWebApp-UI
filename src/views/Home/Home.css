@@ -6,8 +6,15 @@
     height: 84%;
     background-color: #232323;
     min-width: 100%;
-    text-align: center;
     color: turquoise;
     overflow: auto;
 }
 
+.home-center {
+    text-align: center;
+}
+
+.home-info {
+    padding-left: 30%;
+    padding-right: 30%;
+}

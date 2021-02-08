@@ -26,10 +26,14 @@ class AuthService {
 
     async isTokenValid() {
         try {
+            let token = this.getToken();
+            if(token == null) {
+                token = "null";
+            }
             const requestOptions = {
                 method: "POST",
                 headers: {"content-type": "application/json"},
-                body: JSON.stringify(this.getToken())
+                body: JSON.stringify(token)
             };
             const fetchResult = fetch("http://localhost:8117/isValidToken", requestOptions);
             const response = await fetchResult;

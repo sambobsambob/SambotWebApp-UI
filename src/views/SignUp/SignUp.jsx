@@ -78,13 +78,13 @@ class SignUp extends PureComponent {
             <div className="parent">
                 <Header page="signUp"/>
                 <div className="body">
-                    <form onSubmit={this.handleFormSubmit}>
+                    <form className="signup-form" onSubmit={this.handleFormSubmit}>
                         <p className="sign-up-error">{this.state.error}</p>
                         <input autoComplete="off" placeholder="Username" name="username" type="text" onChange={this.handleChange}/><br/>
                         <input placeholder="Email" name="email" type="text" onChange={this.handleChange}/><br/>
                         <input autoComplete="off" placeholder="Password" name="password" type="password" onChange={this.handleChange}/><br/>
                         <input autoComplete="off" placeholder="Confirm Password" name="confirmPassword" type="password" onChange={this.handleChange}/><br/>
-                        <input id="loginBtn" value="LOGIN" type="submit"/>
+                        <input id="loginBtn" value="Sign Up" type="submit"/>
                     </form>
                 </div>
                 <Footer/>

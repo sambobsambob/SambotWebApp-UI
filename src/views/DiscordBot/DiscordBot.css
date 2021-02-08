@@ -1,6 +1,5 @@
-.center {
-    margin-left: auto;
-    margin-right: auto;
+.discordbot-center {
+    text-align: center;
 }
 
 .discordlogo {
@@ -23,6 +22,16 @@ a.addbotlink:visited {
 
 a.addbotlink:hover {
     color: turquoise;
+}
+
+.discordbot-info {
+    padding-left: 35%;
+    padding-right: 35%;
+}
+
+.center-table {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 table, th, td {

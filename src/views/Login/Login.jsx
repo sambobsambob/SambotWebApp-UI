@@ -2,6 +2,7 @@ import React, {PureComponent} from "react";
 import AuthService from "../../components/Auth/Auth.jsx";
 import Header from "../../components/Header/Header.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
+import "./Login.css";
 
 class Login extends PureComponent {
 
@@ -58,11 +59,11 @@ class Login extends PureComponent {
             <div className="parent">
                 <Header page="login"/>
                 <div className="body">
-                    <form onSubmit={this.handleFormSubmit}>
+                    <form className="login-form" onSubmit={this.handleFormSubmit}>
                         <p>{this.state.error}</p>
                         <input placeholder="Username" name="username" type="text" onChange={this.handleChange}/><br/>
                         <input placeholder="Password" name="password" type="password" onChange={this.handleChange}/><br/>
-                        <input id="loginBtn" value="LOGIN" type="submit"/>
+                        <input id="loginBtn" value="Login" type="submit"/>
                     </form>
                 </div>
                 <Footer/>
