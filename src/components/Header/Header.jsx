@@ -12,7 +12,6 @@ class Header extends PureComponent {
             loggedIn: true
         };
         this.onLogout = this.onLogout.bind(this);
-        console.log(window.sessionStorage.getItem("username"));
     }
 
     async componentDidMount() {

@@ -11,6 +11,7 @@ class DiscordBot extends PureComponent {
         super(props);
         this.state = {
             prefix: "!!",
+            guildCount: "0",
             commands: [
                 {command: "help", action: "Displays all the commands available"},
                 {command: "join", action: "Joins your current voice channel"},
@@ -30,6 +31,10 @@ class DiscordBot extends PureComponent {
         };
     }
 
+    componentDidMount() {
+        this.getGuildCount();
+    }
+
     renderCommandTable() {
         return this.state.commands.map((key, value) => {
             const {command, action} = key;
@@ -42,6 +47,15 @@ class DiscordBot extends PureComponent {
         });
     }
 
+    async getGuildCount() {
+        const fetchRequest = fetch("http://localhost:8117/getDiscordBotGuildCount");
+        const response = await fetchRequest;
+        const data = await response.json();
+        this.setState({
+            guildCount: data
+        });
+    }
+
     render() {
         return (
             <div className="parent">
@@ -49,6 +63,7 @@ class DiscordBot extends PureComponent {
                 <div className="body">
                     <div className="discordbot-center">
                         <img className="discordlogo" src={DiscordLogo} alt="React Logo" /><br/>
+                        <h1>sambotsambot is on:<br/> {this.state.guildCount} servers!</h1>
                         <p className="addbottext">Click <a className="addbotlink" href="https://discord.com/oauth2/authorize?client_id=573251480279056427&permissions=8&scope=bot" rel="noreferrer" target="_blank">here</a> to add the bot to your server!</p>
                     </div>
                     <div className="discordbot-info">
